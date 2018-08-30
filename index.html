@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>André Luiz Teixeira Grigaitis Ribeiro</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <style>
+        .Skills {
+            background: rgba(255, 255, 255, 1);
+            background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(2, 86, 155, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(0%, rgba(2, 86, 155, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(2, 86, 155, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(2, 86, 155, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(2, 86, 155, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(2, 86, 155, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <banner class="banner">
+            <div class="background-banner">
+                <div id="profile">
+                    <img src="imagens/eu.png " alt="Minha Foto " height="350" width="350">
+                </div>
+                <div class="conteudo-text">
+                    <h1 class="nome">
+                        <p>
+                            André Luiz Teixeira Grigaitis Ribeiro
+                        </p>
+                    </h1>
+                    <h2>
+                        <p>
+                            &lt;Web Designer&gt;
+                        </p>
+                    </h2>
+                    <br>
+                    <p>E-mail: andreltgribeiro@gmail.com</p>
+                    <p>Telefones: (011) 94018-7679 / (011) 3975-7340</p>
+                </div>
+
+            </div>
+
+
+        </banner>
+    </header>
+    <main>
+        <section class="Skills">
+
+            <h2 class="title-skill">
+                Skills
+            </h2>
+            <div class="quebra">
+                <div class="quadrado"></div>
+            </div>
+            <p class="title-chart">
+                Tecnologias
+            </p>
+
+            <div class="Chart">
+                <div class="tech-logos">
+                    <img class="css" src="imagens/CSS.png" alt="Logo css">
+                    <img class="illustrator" src="imagens/ILLUSTRATOR.png" alt="Logo Illustrator">
+                    <img class="photoshop" src="imagens/Photoshop.jpg" alt="Logo Photoshop">
+                    <img class="trello" src="imagens/TRELLO.png" alt="Logo TRELLO">
+                    <img class="git" src="imagens/GIT.png" alt="Logo GIT">
+                    <img class="office" src="imagens/OFFICE.png" alt="Logo OFFICE">
+                    <img class="windows" src="imagens/images.png" alt="Logo windows">
+                    <img class="scrum" src="imagens/scrum.png" alt="Logo scrum">
+                    <img class="html" src="imagens/HTML.png" alt="Logo html">
+                </div>
+                <canvas id="myChart"></canvas>
+            </div>
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var config = {
+                    type: 'doughnut',
+                    data: {
+
+                        datasets: [{
+                            data: [
+                                11.1,
+                                11.1,
+                                11.1,
+                                11.1,
+                                11.1,
+                                11.1,
+                                11.1,
+                                11.1,
+                                11.1
+                            ],
+                            backgroundColor: [
+                                "#FF7D00",
+                                "#9FCBFD",
+                                "#007AC3",
+                                "#110D0D",
+                                "#E73F24",
+                                "#00ADEF",
+                                "#0094D4",
+                                "#E44D26",
+                                "#0070BA",
+                            ],
+                            label: 'Dataset 1'
+                        }],
+                        labels: [
+                            'Ai 60% de Progresso',
+                            'Photoshop 30% de Progresso',
+                            'Trello 70% de Progresso',
+                            'Git Hub 10% de Progresso',
+                            'Pacote Office 90% de Progresso',
+                            'Windows 80% de Progresso',
+                            'Scrum 100% de Progresso',
+                            'HTML 80% de Progresso',
+                            'CSS 80% de Progresso'
+                        ]
+                    },
+
+                    options: {
+
+                        responsive: true,
+                        legend: {
+                            position: 'center',
+                        },
+                        title: {
+                            display: true,
+                            // text: 'Tecnologias'
+
+                        },
+                        animation: {
+                            animateScale: true,
+                            animateRotate: true
+                        }
+                    }
+                };
+                var myChart = new Chart(ctx, config);
+            </script>
+
+
+        </section>
+        <div class="quebra">
+            <div class="quadrado2"></div>
+        </div>
+
+        <section>
+            <h2 class="Cursos">
+                Cursos
+            </h2>
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h2 class="time">2018</h2>
+                        <p class="title-timeline">Ensino médio</p>
+                        <p>E.E Clodomiro Carneiro - 3º Ano do Ensino Médio.</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2 class="time">2016-2017</h2>
+                        <p class="title-timeline">Jovem Aprendiz Nextel LTDA</p>
+                        <p>Jovem Aprendiz com experiência em todos os procedimentos de tesouraria.</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2 class="time">2019</h2>
+                        <p class="title-timeline">Curso Técnico</p>
+                        <p>Desenvolvimento de sistemas Escola SENAI de Informática.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <div class="quebra">
+        <div class="quadrado3"></div>
+    </div>
+    <footer class="footer">
+        <div class="footerImg">
+            <div class="footer-img">
+                <a class="face-link" href="https://www.facebook.com/profile.php?id=100004481652080&ref=bookmarks" target="_blank">
+                    <img style="width: 170px; height: 170px;" src="imagens/Facebook.png" alt="facebook">
+                </a>
+                <a class="git-link" href="https://github.com/andreltgribeiro" target="_blank">
+                    <img style="width: 170px; height: 170px;" src="imagens/GIT.png" alt="GitHub">
+                </a>
+                <a class="pint-link" href="https://br.pinterest.com/andreltgribeiro/" target="_blank">
+                    <img style="width: 280px; height: 170px;" src="imagens/Pinterest.png" alt="Pinterest">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+    </style>
+</body>
+
+</html>
